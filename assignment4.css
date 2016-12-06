@@ -1,11 +1,23 @@
+body{
+  background-color: grey;
+}
+#myDiv{
+  text-align: center; 
+  margin-top: 75px; 
+}
+li {
+  list-style-type: none;
+}
 .flexsearch-wrapper {
   height: auto;
-  width: auto;
+  width: 400px;
   max-width: 100%;
   overflow: hidden;
   background: transparent;
   margin: 0;
-  position: static;
+  margin-right: auto; 
+  margin-left: auto;
+  position: center;
 }
 
 .flexsearch-form {
@@ -33,7 +45,7 @@
   height: 60px;
   width: 100%;
   padding: 0 46px 0 10px;
-  border-color: #888;
+  border-color: black;
   border-radius: 35px;
   border-style: solid;
   border-width: 5px;
@@ -55,7 +67,7 @@
   border: none;
   margin-right: 5px;
   background: transparent;
-  color: #888;
+  color: black;
   font-family: 'Helvetica', sans-serif;
   font-size: 40px;
   line-height: 60px;
@@ -63,31 +75,53 @@
 
 .flexsearch-input:focus {
   outline: none;
-  border-color: #333;
+  border-color: black;
 }
 
 .flexsearch-input:focus.flexsearch-submit {
-  color: #333;
+  color: black;
 }
 
 .flexsearch-submit:hover {
-  color: #333;
+  color: black;
   cursor: pointer;
 }
 
 ::-webkit-input-placeholder {
-  color: #888;
+  color: black;
 }
 
 input:-moz-placeholder {
-  color: #888;
+  color: black;
 }
 
 .h1 {
-  color: #333;
+  color: black;
   font-family: 'Helvetica', sans-serif;
   font-size: 45px;
   font-weight: bold;
   line-height: 45px;
   text-align: center;
+}
+
+/*fonts fonts fonts fonts fonts fonts fonts fonts fonts*/
+@font-face {
+    font-family:'Walkway_Oblique_UltraBold';
+    src: url('../fonts/Walkway_Oblique_UltraBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+p, ul, li, td, div { 
+  font-family: Walkway_Oblique_UltraBold;
+  font-variant: small-caps;
+}
+@font-face {
+    font-family:'Walkway_SemiBold';
+    src: url('../fonts/Walkway_SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+h1{
+  font-family: Walkway_SemiBold;
+  font-variant: small-caps;
 }

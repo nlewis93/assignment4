@@ -2,19 +2,30 @@
 
 (function() {
   // Magic!
-  console.log('Keepin\'n it clean with an external script!');
-
-  var $url    = $('.flexsearch-input') || '';
+  alert('Keepin\'n it clean with an external script!');
 
   $('#mainForm').on('submit', function(e) {
+
     e.preventDefault();
     $.ajax({
-      url: $url,
-      method: 'GET'
+      type: 'GET',
+      url: 'http://www.mattbowytz.com/simple_api.json?data=all',
     }).success(function(data) {
-      console.log(data);
-    }).fail(function(data) {
-      console.log(data);
-    });
+
+	var myArray = ''; 
+
+	$.each(data.data.programming, function(i,data){
+		myArray += '<li>' + data + '</li>';
+	});
+
+	$('#myDiv').append(myArray);
+	console.log(myArray);
+
+        }).fail(function(data){
+      		console.log(data);
+        });
   });
 })();
+
+
+
